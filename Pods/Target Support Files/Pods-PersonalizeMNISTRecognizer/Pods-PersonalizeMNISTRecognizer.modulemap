@@ -1,0 +1,6 @@
+module Pods_PersonalizeMNISTRecognizer {
+  umbrella header "Pods-PersonalizeMNISTRecognizer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12234E97471AF60BFC94B9D9 /* libPods-PersonalizeMNISTRecognizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD5DBB09F7FF04605ACB4C1 /* libPods-PersonalizeMNISTRecognizer.a */; };
 		A74A930824042C60007670D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74A930724042C60007670D8 /* AppDelegate.swift */; };
 		A74A930A24042C60007670D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74A930924042C60007670D8 /* SceneDelegate.swift */; };
 		A74A930C24042C60007670D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74A930B24042C60007670D8 /* ViewController.swift */; };
 		A74A930F24042C60007670D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74A930D24042C60007670D8 /* Main.storyboard */; };
 		A74A931124042C61007670D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74A931024042C61007670D8 /* Assets.xcassets */; };
 		A74A931424042C61007670D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74A931224042C61007670D8 /* LaunchScreen.storyboard */; };
+		A7BCED5124050A9200B63BCD /* EvaluateModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCED5024050A9200B63BCD /* EvaluateModelViewController.swift */; };
+		A7BCED57240519F800B63BCD /* MNISTClassifierApple.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7BCED56240519F800B63BCD /* MNISTClassifierApple.mlmodel */; };
+		A7BCED592405273000B63BCD /* CustomMNISTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCED582405273000B63BCD /* CustomMNISTViewController.swift */; };
+		A7BCED5D24054F8E00B63BCD /* mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7BCED5C24054F8E00B63BCD /* mnist.mlmodel */; };
+		A7F20DCF2404E41E002CD2D6 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F20DCE2404E41E002CD2D6 /* CanvasView.swift */; };
+		A7F20DD12404E7CF002CD2D6 /* AddDatasetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F20DD02404E7CF002CD2D6 /* AddDatasetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		A74A931024042C61007670D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74A931324042C61007670D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74A931524042C61007670D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7BCED5024050A9200B63BCD /* EvaluateModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluateModelViewController.swift; sourceTree = "<group>"; };
+		A7BCED56240519F800B63BCD /* MNISTClassifierApple.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTClassifierApple.mlmodel; sourceTree = "<group>"; };
+		A7BCED582405273000B63BCD /* CustomMNISTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMNISTViewController.swift; sourceTree = "<group>"; };
+		A7BCED5C24054F8E00B63BCD /* mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = mnist.mlmodel; path = ../../../../Downloads/mnist.mlmodel; sourceTree = "<group>"; };
+		A7F20DCE2404E41E002CD2D6 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		A7F20DD02404E7CF002CD2D6 /* AddDatasetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDatasetViewController.swift; sourceTree = "<group>"; };
+		EAD5DBB09F7FF04605ACB4C1 /* libPods-PersonalizeMNISTRecognizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PersonalizeMNISTRecognizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE1B0FBECF95E5A955B7A4C /* Pods-PersonalizeMNISTRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalizeMNISTRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-PersonalizeMNISTRecognizer/Pods-PersonalizeMNISTRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		FD29481AD851B957EAF024EA /* Pods-PersonalizeMNISTRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalizeMNISTRecognizer.release.xcconfig"; path = "Target Support Files/Pods-PersonalizeMNISTRecognizer/Pods-PersonalizeMNISTRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12234E97471AF60BFC94B9D9 /* libPods-PersonalizeMNISTRecognizer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003E593A1C6CCF9F7F06DFE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFE1B0FBECF95E5A955B7A4C /* Pods-PersonalizeMNISTRecognizer.debug.xcconfig */,
+				FD29481AD851B957EAF024EA /* Pods-PersonalizeMNISTRecognizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		00E31B592878CF4BB25707B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAD5DBB09F7FF04605ACB4C1 /* libPods-PersonalizeMNISTRecognizer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A74A92FB24042C60007670D8 = {
 			isa = PBXGroup;
 			children = (
 				A74A930624042C60007670D8 /* PersonalizeMNISTRecognizer */,
 				A74A930524042C60007670D8 /* Products */,
+				003E593A1C6CCF9F7F06DFE6 /* Pods */,
+				00E31B592878CF4BB25707B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +94,43 @@
 			children = (
 				A74A930724042C60007670D8 /* AppDelegate.swift */,
 				A74A930924042C60007670D8 /* SceneDelegate.swift */,
-				A74A930B24042C60007670D8 /* ViewController.swift */,
-				A74A930D24042C60007670D8 /* Main.storyboard */,
+				A7F20DCB2404E3D3002CD2D6 /* Model */,
+				A7F20DCA2404E3CE002CD2D6 /* View */,
+				A7F20DC92404E3BD002CD2D6 /* Controller */,
 				A74A931024042C61007670D8 /* Assets.xcassets */,
-				A74A931224042C61007670D8 /* LaunchScreen.storyboard */,
 				A74A931524042C61007670D8 /* Info.plist */,
 			);
 			path = PersonalizeMNISTRecognizer;
+			sourceTree = "<group>";
+		};
+		A7F20DC92404E3BD002CD2D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A74A930B24042C60007670D8 /* ViewController.swift */,
+				A7F20DCE2404E41E002CD2D6 /* CanvasView.swift */,
+				A7F20DD02404E7CF002CD2D6 /* AddDatasetViewController.swift */,
+				A7BCED5024050A9200B63BCD /* EvaluateModelViewController.swift */,
+				A7BCED582405273000B63BCD /* CustomMNISTViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A7F20DCA2404E3CE002CD2D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A74A930D24042C60007670D8 /* Main.storyboard */,
+				A74A931224042C61007670D8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A7F20DCB2404E3D3002CD2D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7BCED56240519F800B63BCD /* MNISTClassifierApple.mlmodel */,
+				A7BCED5C24054F8E00B63BCD /* mnist.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A74A931824042C61007670D8 /* Build configuration list for PBXNativeTarget "PersonalizeMNISTRecognizer" */;
 			buildPhases = (
+				7764959F48DD989784D1472A /* [CP] Check Pods Manifest.lock */,
 				A74A930024042C60007670D8 /* Sources */,
 				A74A930124042C60007670D8 /* Frameworks */,
 				A74A930224042C60007670D8 /* Resources */,
@@ -133,14 +200,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7764959F48DD989784D1472A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalizeMNISTRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A74A930024042C60007670D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BCED5124050A9200B63BCD /* EvaluateModelViewController.swift in Sources */,
+				A7F20DD12404E7CF002CD2D6 /* AddDatasetViewController.swift in Sources */,
 				A74A930C24042C60007670D8 /* ViewController.swift in Sources */,
+				A7BCED5D24054F8E00B63BCD /* mnist.mlmodel in Sources */,
+				A7F20DCF2404E41E002CD2D6 /* CanvasView.swift in Sources */,
 				A74A930824042C60007670D8 /* AppDelegate.swift in Sources */,
 				A74A930A24042C60007670D8 /* SceneDelegate.swift in Sources */,
+				A7BCED592405273000B63BCD /* CustomMNISTViewController.swift in Sources */,
+				A7BCED57240519F800B63BCD /* MNISTClassifierApple.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +380,7 @@
 		};
 		A74A931924042C61007670D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE1B0FBECF95E5A955B7A4C /* Pods-PersonalizeMNISTRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +399,7 @@
 		};
 		A74A931A24042C61007670D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD29481AD851B957EAF024EA /* Pods-PersonalizeMNISTRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

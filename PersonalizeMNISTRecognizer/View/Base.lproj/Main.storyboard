@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4tL-fE-ZYW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MNIST Classifier-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MNIST Classifier" id="Bbh-sj-IPg"/>
+                    <connections>
+                        <segue destination="uui-NZ-hPk" kind="show" identifier="goToAddDataset" id="7Aw-Ce-B2x"/>
+                        <segue destination="ais-2Q-WrR" kind="show" identifier="goToEvaluateModel" id="Ycz-uZ-Uss"/>
+                        <segue destination="MOe-Uk-E9C" kind="show" identifier="goToCustomModel" id="Sgo-z2-kC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="108.48214285714285"/>
+        </scene>
+        <!--Add Number-->
+        <scene sceneID="EwM-Ym-v0D">
+            <objects>
+                <viewController id="uui-NZ-hPk" customClass="AddDatasetViewController" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbv-6S-AZW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What number?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5am-VE-HdE">
+                                <rect key="frame" x="40" y="245" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tl-uf-6hj" customClass="CanvasView" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="423" width="414" height="380"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jna-ME-G1a">
+                                <rect key="frame" x="184" y="829" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearCanvas:" destination="uui-NZ-hPk" eventType="touchUpInside" id="X7O-Id-CB3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw your number on the canvas below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lv-AS-0Em">
+                                <rect key="frame" x="56" y="394" width="302" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1lv-AS-0Em" firstAttribute="top" secondItem="5am-VE-HdE" secondAttribute="bottom" constant="115" id="6i2-DS-uXE"/>
+                            <constraint firstItem="1Tl-uf-6hj" firstAttribute="leading" secondItem="GRc-Xu-j4b" secondAttribute="leading" id="ASW-dA-pKt"/>
+                            <constraint firstItem="5am-VE-HdE" firstAttribute="leading" secondItem="GRc-Xu-j4b" secondAttribute="leading" constant="40" id="Apn-52-1NN"/>
+                            <constraint firstItem="5am-VE-HdE" firstAttribute="top" secondItem="GRc-Xu-j4b" secondAttribute="top" constant="157" id="I83-PJ-tkD"/>
+                            <constraint firstItem="jna-ME-G1a" firstAttribute="top" secondItem="1Tl-uf-6hj" secondAttribute="bottom" constant="26" id="Sya-93-kb7"/>
+                            <constraint firstItem="GRc-Xu-j4b" firstAttribute="trailing" secondItem="5am-VE-HdE" secondAttribute="trailing" constant="39" id="Yk4-P5-Tm6"/>
+                            <constraint firstItem="1Tl-uf-6hj" firstAttribute="trailing" secondItem="GRc-Xu-j4b" secondAttribute="trailing" id="bEh-6K-LKO"/>
+                            <constraint firstItem="GRc-Xu-j4b" firstAttribute="trailing" secondItem="jna-ME-G1a" secondAttribute="trailing" constant="183" id="eEb-h8-8Ag"/>
+                            <constraint firstItem="jna-ME-G1a" firstAttribute="leading" secondItem="GRc-Xu-j4b" secondAttribute="leading" constant="184" id="fcG-rh-25w"/>
+                            <constraint firstItem="1lv-AS-0Em" firstAttribute="leading" secondItem="GRc-Xu-j4b" secondAttribute="leading" constant="56" id="gtL-8N-lOG"/>
+                            <constraint firstAttribute="bottom" secondItem="jna-ME-G1a" secondAttribute="bottom" constant="31" id="hvZ-gT-Uqa"/>
+                            <constraint firstItem="1Tl-uf-6hj" firstAttribute="top" secondItem="1lv-AS-0Em" secondAttribute="bottom" constant="8" id="pCG-z9-3pg"/>
+                            <constraint firstItem="GRc-Xu-j4b" firstAttribute="trailing" secondItem="1lv-AS-0Em" secondAttribute="trailing" constant="56" id="wD1-pf-IWs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GRc-Xu-j4b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Number" id="aOx-6y-iig">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MUf-wx-dDK">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="uui-NZ-hPk" id="q9J-Ey-Chs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="1Tl-uf-6hj" id="Jaf-gp-o13"/>
+                        <outlet property="numberTextField" destination="5am-VE-HdE" id="4Fs-YE-8wQ"/>
+                        <outlet property="saveBtn" destination="MUf-wx-dDK" id="RSr-6E-8Tv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGa-1w-Vkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130.434782608696" y="98.4375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CXA-JG-nH2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4tL-fE-ZYW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aL9-mx-sSM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qn2-EM-tqz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocb-QH-fqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+        <!--Evaluate Model View Controller-->
+        <scene sceneID="p91-IA-tOa">
+            <objects>
+                <viewController id="ais-2Q-WrR" customClass="EvaluateModelViewController" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZR-bv-8b6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gp-H4-DA9">
+                                <rect key="frame" x="20" y="433" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearCanvas:" destination="ais-2Q-WrR" eventType="touchUpInside" id="Czg-9C-SLO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyC-Vf-kDd">
+                                <rect key="frame" x="0.0" y="20" width="414" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="Fz3-Wr-knO"/>
+                                    <constraint firstAttribute="width" constant="414" id="Nuf-71-D2Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-JO-5H9">
+                                <rect key="frame" x="322" y="433" width="72" height="30"/>
+                                <state key="normal" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeDigit:" destination="ais-2Q-WrR" eventType="touchUpInside" id="1hr-dJ-924"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-8Q-Dga" customClass="CanvasView" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target">
+                                <rect key="frame" x="10" y="480" width="394" height="394"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Gp-H4-DA9" firstAttribute="leading" secondItem="GM3-VF-0rt" secondAttribute="leading" constant="20" id="CbR-JM-8Ck"/>
+                            <constraint firstItem="uz7-8Q-Dga" firstAttribute="top" secondItem="8Gp-H4-DA9" secondAttribute="bottom" constant="17" id="EL4-ai-A0U"/>
+                            <constraint firstItem="GM3-VF-0rt" firstAttribute="trailing" secondItem="uz7-8Q-Dga" secondAttribute="trailing" constant="10" id="GoI-40-maL"/>
+                            <constraint firstItem="uz7-8Q-Dga" firstAttribute="leading" secondItem="GM3-VF-0rt" secondAttribute="leading" constant="10" id="KiV-rD-ySX"/>
+                            <constraint firstItem="JyC-Vf-kDd" firstAttribute="trailing" secondItem="GM3-VF-0rt" secondAttribute="trailing" id="MI4-Ob-HIs"/>
+                            <constraint firstItem="GM3-VF-0rt" firstAttribute="trailing" secondItem="q0h-JO-5H9" secondAttribute="trailing" constant="20" id="WJS-Hh-GEE"/>
+                            <constraint firstItem="q0h-JO-5H9" firstAttribute="top" secondItem="JyC-Vf-kDd" secondAttribute="bottom" constant="108" id="b77-zQ-rga"/>
+                            <constraint firstItem="JyC-Vf-kDd" firstAttribute="top" secondItem="gZR-bv-8b6" secondAttribute="top" constant="20" symbolic="YES" id="d2T-1C-LgH"/>
+                            <constraint firstItem="JyC-Vf-kDd" firstAttribute="leading" secondItem="GM3-VF-0rt" secondAttribute="leading" id="p5J-Yz-aA8"/>
+                            <constraint firstAttribute="bottom" secondItem="uz7-8Q-Dga" secondAttribute="bottom" constant="22" id="scp-Ie-6jw"/>
+                            <constraint firstItem="8Gp-H4-DA9" firstAttribute="top" secondItem="JyC-Vf-kDd" secondAttribute="bottom" constant="108" id="yco-yE-HlO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GM3-VF-0rt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YPK-0o-Fbz"/>
+                    <connections>
+                        <outlet property="canvasView" destination="uz7-8Q-Dga" id="fPi-lK-XkB"/>
+                        <outlet property="digitLabel" destination="JyC-Vf-kDd" id="GOV-Tu-K6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6a-6c-17N" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="808"/>
+        </scene>
+        <!--CustomMNIST View Controller-->
+        <scene sceneID="gPF-EN-DXi">
+            <objects>
+                <viewController id="MOe-Uk-E9C" customClass="CustomMNISTViewController" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SkI-ft-qGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH7-QB-uSc">
+                                <rect key="frame" x="20" y="433" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearCanvas:" destination="MOe-Uk-E9C" eventType="touchUpInside" id="VAN-M3-Ijc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8X-xq-NLC">
+                                <rect key="frame" x="0.0" y="20" width="414" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="fGX-VS-Mt1"/>
+                                    <constraint firstAttribute="height" constant="305" id="hEM-Ed-4Zg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3m-X1-Sjy">
+                                <rect key="frame" x="322" y="433" width="72" height="30"/>
+                                <state key="normal" title="Recognize"/>
+                                <connections>
+                                    <action selector="recognizeDigit:" destination="MOe-Uk-E9C" eventType="touchUpInside" id="SBX-gM-NrS"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8XM-Pi-28D" customClass="CanvasView" customModule="PersonalizeMNISTRecognizer" customModuleProvider="target">
+                                <rect key="frame" x="10" y="480" width="394" height="394"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8XM-Pi-28D" secondAttribute="bottom" constant="22" id="2R8-Xc-e0k"/>
+                            <constraint firstItem="8XM-Pi-28D" firstAttribute="leading" secondItem="2Wk-Qk-o4c" secondAttribute="leading" constant="10" id="4Dd-OQ-Jyn"/>
+                            <constraint firstItem="2Wk-Qk-o4c" firstAttribute="trailing" secondItem="8XM-Pi-28D" secondAttribute="trailing" constant="10" id="5X8-YU-ZXb"/>
+                            <constraint firstItem="8XM-Pi-28D" firstAttribute="top" secondItem="QH7-QB-uSc" secondAttribute="bottom" constant="17" id="La5-er-zMJ"/>
+                            <constraint firstItem="QH7-QB-uSc" firstAttribute="top" secondItem="h8X-xq-NLC" secondAttribute="bottom" constant="108" id="gzc-Dq-zY1"/>
+                            <constraint firstItem="h8X-xq-NLC" firstAttribute="trailing" secondItem="2Wk-Qk-o4c" secondAttribute="trailing" id="hSi-33-bpT"/>
+                            <constraint firstItem="2Wk-Qk-o4c" firstAttribute="trailing" secondItem="J3m-X1-Sjy" secondAttribute="trailing" constant="20" id="qAB-Ub-zuE"/>
+                            <constraint firstItem="QH7-QB-uSc" firstAttribute="leading" secondItem="2Wk-Qk-o4c" secondAttribute="leading" constant="20" id="ruV-mT-rkN"/>
+                            <constraint firstItem="J3m-X1-Sjy" firstAttribute="top" secondItem="h8X-xq-NLC" secondAttribute="bottom" constant="108" id="uQM-Ph-aKr"/>
+                            <constraint firstItem="h8X-xq-NLC" firstAttribute="leading" secondItem="2Wk-Qk-o4c" secondAttribute="leading" id="xky-oP-puh"/>
+                            <constraint firstItem="h8X-xq-NLC" firstAttribute="top" secondItem="SkI-ft-qGJ" secondAttribute="top" constant="20" symbolic="YES" id="zFi-87-mRS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Wk-Qk-o4c"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PGy-QN-MUI"/>
+                    <connections>
+                        <outlet property="canvasView" destination="8XM-Pi-28D" id="fFg-8W-3cA"/>
+                        <outlet property="digitLabel" destination="h8X-xq-NLC" id="X86-Zj-7jX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUT-SR-zLY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="905"/>
+        </scene>
+    </scenes>
+</document>
