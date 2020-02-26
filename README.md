@@ -15,9 +15,15 @@ load the apple's MNIST mlmodel.
 - During the evaluation, the model will take the feature vector difference from your drawing in the dataset and 
   the drawing during the test and give you the label of the least distance. 
 
-The GIF below suggests how the application can be tested. 
+The GIF below suggests how to add dataset. 
 
 ![](https://media.giphy.com/media/kC7kfQx4XIuWprIpws/giphy.gif)
+
+The GIF below suggests how to test using the added dataset. 
+
+![](https://media.giphy.com/media/H1G0wnXhyMbzspIidH/giphy.gif)
+
+
 
 ### Future scope
 
