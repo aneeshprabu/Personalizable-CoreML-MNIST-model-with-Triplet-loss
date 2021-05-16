@@ -1,4 +1,4 @@
-# Personalizable-CoreML-MNIST-model-with-Triplet-loss
+# Personalizable CoreML MNIST trained with Triplet-loss
 
 This application interface will let the user to add numbers to the database and evaluate them respectively.
 
@@ -28,4 +28,4 @@ The GIF below suggests how to test using the added dataset.
 ### Future scope
 
 During the latest WWDC apple introduced on-device training. This project was created to use the feature and 
-train the model on-device. Will be updating soon.
+train the model on-device. Currently, ONNX support is limited which restricts us from harnessing the custom layers and custom modelling capabilities of TensorFlow, PyTorch and Apache MXNet. Will be updating soon.
